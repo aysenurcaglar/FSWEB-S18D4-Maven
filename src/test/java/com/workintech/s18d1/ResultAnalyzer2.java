@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class ResultAnalyzer implements TestWatcher, AfterAllCallback{
+public class ResultAnalyzer2 implements TestWatcher, AfterAllCallback{
     private List<TestResultStatus> testResultsStatus = new ArrayList<>();
     private static final String taskId = "163";
 
@@ -55,7 +55,7 @@ public class ResultAnalyzer implements TestWatcher, AfterAllCallback{
         long failure = summary.get(TestResultStatus.FAILED) != null ? summary.get(TestResultStatus.FAILED) : 0;
 
         long score = success / (success + failure);
-        String userId = "999999";
+        String userId = "177626";
 
         JSONObject json = new JSONObject();
         json.put("score", score);
